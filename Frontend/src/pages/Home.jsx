@@ -48,7 +48,7 @@ const Home = () => {
     if (title) title = title.trim();
     if (!title) return
 
-    const response = await axios.post("https://chattrix-ui8e.onrender.com/api/chat", {
+    const response = await axios.post("https://chattrix-stel.onrender.com/api/chat", {
       title
     }, {
       withCredentials: true
@@ -61,7 +61,7 @@ const Home = () => {
   // Ensure at least one chat exists initially
   useEffect(() => {
 
-    axios.get("https://chattrix-ui8e.onrender.com/api/chat", { withCredentials: true })
+    axios.get("https://chattrix-stel.onrender.com/api/chat", { withCredentials: true })
       .then(response => {
         dispatch(setChats(response.data.chats.reverse()));
       })
@@ -119,7 +119,7 @@ const Home = () => {
 
   const getMessages = async (chatId) => {
 
-   const response = await  axios.get(`https://chattrix-ui8e.onrender.com/api/chat/messages/${chatId}`, { withCredentials: true })
+   const response = await  axios.get(`https://chattrix-stel.onrender.com/api/chat/messages/${chatId}`, { withCredentials: true })
 
    console.log("Fetched messages:", response.data.messages);
 

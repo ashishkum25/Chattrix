@@ -21,7 +21,7 @@ const Login = () => {
 
         console.log(form);
 
-        axios.post("https://chattrix-ui8e.onrender.com/api/auth/login", {
+        axios.post("https://chattrix-stel.onrender.com/api/auth/login", {
             email: form.email,
             password: form.password
         },
