@@ -66,7 +66,7 @@ const Home = () => {
         dispatch(setChats(response.data.chats.reverse()));
       })
 
-    const tempSocket = io("https://cohort-1-project-chat-gpt.onrender.com", {
+    const tempSocket = io("https://chattrix-stel.onrender.com", {
       withCredentials: true,
     })
 
